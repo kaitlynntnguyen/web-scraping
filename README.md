@@ -1,48 +1,102 @@
-# web-scraping
+Background
+You’re now ready to take on the full web-scraping and data analysis project for the mission to Mars. You’ve learned to identify HTML elements on a page, identify their id and class attributes, and use this knowledge to extract information via both automated browsing with Splinter and HTML parsing with Beautiful Soup. You’ve also learned to scrape various types of information. These include HTML tables and recurring elements, like multiple news articles on a webpage.
+
+As you work on this Challenge, remember that you’re strengthening the same core skills that you’ve been developing until now: collecting data, organizing and storing data, analyzing data, and then visually communicating your insights.
+
+What You're Creating
+This new assignment consists of two technical products. You will submit the following deliverables:
+
+Deliverable 1: Scrape titles and preview text from Mars news articles. Optionally export the data into a JSON file or a MongoDB database.
+
+Deliverable 2: Scrape and analyze Mars weather data, which exists in a table.
+
 Instructions
-Part 1: Scrape Titles and Preview Text from Mars News
-Open the Jupyter Notebook in the starter code folder named part_1_mars_news.ipynb. You will work in this code as you follow the steps below to scrape the Mars News website.
+Deliverable 1: Scrape Titles and Preview Text from Mars News
+Use automated browsing to visit the Mars NASA news site. Inspect the page to identify which elements to scrape.
+Screenshot 2022-12-19 at 2 09 12 PM
 
-Use automated browsing to visit the Mars news siteLinks to an external site.. Inspect the page to identify which elements to scrape.
+Create a Beautiful Soup object and use it to extract text elements from the website.
+Screenshot 2022-12-19 at 2 35 49 PM
 
-Part 2: Scrape and Analyze Mars Weather Data
-Open the Jupyter Notebook in the starter code folder named part_2_mars_weather.ipynb. You will work in this code as you follow the steps below to scrape and analyze Mars weather data.
+Extract the titles and preview text of the news articles that you scraped. Store the scraping results in Python data structures as follows:
+Store each title-and-preview pair in a Python dictionary. And, give each dictionary two keys: title and preview.
 
-Use automated browsing to visit the Mars Temperature Data SiteLinks to an external site.. Inspect the page to identify which elements to scrape. Note that the URL is https://static.bc-edx.com/data/web/mars_facts/temperature.html.
+Store all the dictionaries in a Python list.
+
+Screenshot 2022-12-19 at 2 20 08 PM
+
+Print the list in your notebook.
+Screenshot 2022-12-19 at 2 12 08 PM
+
+Optionally, store the scraped data in a file or database (to ease sharing the data with others). To do so, export the scraped data to either a JSON file or a MongoDB database.
+Screenshot 2022-12-19 at 2 12 15 PM
+
+Deliverable 2: Scrape and Analyze Mars Weather Data
+Use automated browsing to visit the Mars Temperature Data Site. Inspect the page to identify which elements to scrape.
+Screenshot 2022-12-19 at 2 25 21 PM
+
+Create a Beautiful Soup object and use it to scrape the data in the HTML table. Note that this can also be achieved by using the Pandas read_html function. However, use Beautiful Soup here to continue sharpening your web scraping skills.
+Screenshot 2022-12-19 at 2 25 32 PM
+
+Assemble the scraped data into a Pandas DataFrame. The columns should have the same headings as the table on the website. Here’s an explanation of the column headings:
+id: the identification number of a single transmission from the Curiosity rover
+
+terrestrial_date: the date on Earth
+
+sol: the number of elapsed sols (Martian days) since Curiosity landed on Mars
+
+ls: the solar longitude
+
+month: the Martian month
+
+min_temp: the minimum temperature, in Celsius, of a single Martian day (sol)
+
+pressure: The atmospheric pressure at Curiosity's location
+
+Screenshot 2022-12-19 at 2 25 40 PM
+
+Screenshot 2022-12-19 at 2 25 48 PM
+
+Examine the data types that are currently associated with each column. If necessary, cast (or convert) the data to the appropriate datetime, int, or float data types.
+Screenshot 2022-12-19 at 2 26 09 PM
 
 Analyze your dataset by using Pandas functions to answer the following questions:
-
 How many months exist on Mars?
+Screenshot 2022-12-19 at 2 26 36 PM
+
 How many Martian (and not Earth) days worth of data exist in the scraped dataset?
+Screenshot 2022-12-19 at 2 27 20 PM
+
 What are the coldest and the warmest months on Mars (at the location of Curiosity)? To answer this question:
-Find the average minimum daily temperature for all of the months.
+
+Find the average the minimum daily temperature for all of the months.
+Screenshot 2022-12-19 at 2 49 37 PM
+
 Plot the results as a bar chart.
+Screenshot 2022-12-19 at 2 27 30 PM
+
+Screenshot 2022-12-19 at 2 27 40 PM
+
+On average, the third month has the coldest minimum temperature on Mars, and the eighth month is the warmest. But it is always very cold there in human terms!
 Which months have the lowest and the highest atmospheric pressure on Mars? To answer this question:
-Find the average daily atmospheric pressure of all the months.
+
+Find the average the daily atmospheric pressure of all the months.
+Screenshot 2022-12-19 at 2 27 50 PM
+
 Plot the results as a bar chart.
+Screenshot 2022-12-19 at 2 27 58 PM
+
+Atmospheric pressure is, on average, lowest in the sixth month and highest in the ninth.
 About how many terrestrial (Earth) days exist in a Martian year? To answer this question:
+
 Consider how many days elapse on Earth in the time that Mars circles the Sun once.
+
 Visually estimate the result by plotting the daily minimum temperature.
+
+Screenshot 2022-12-19 at 2 28 07 PM
+
+The distance from peak to peak is roughly 1425-750, or 675 days. A year on Mars appears to be about 675 days from the plot. Internet search confirms that a Mars year is equivalent to 687 earth days.
 Export the DataFrame to a CSV file.
+Screenshot 2022-12-19 at 3 00 46 PM
 
-Requirements
-Part 1: Scrape Titles and Preview Text from Mars News (40 points)
-Automated browsing (with Splinter) was used to visit the Mars news site, and the HTML code was extracted (with Beautiful Soup). (10 points)
 
-The titles and preview text of the news articles were scraped and extracted. (20 points)
-
-The scraped information was stored in the specified Python data structure—specifically, a list of dictionaries. (10 points)
-
-Part 2: Scrape and Analyze Mars Weather Data (60 points)
-The HTML table was extracted into a Pandas DataFrame. Either Pandas or Splinter and Beautiful Soup were used to scrape the data. The columns have the correct headings and data types. (15 points)
-
-The data was analyzed to answer the following questions: (10 points)
-
-How many months exist on Mars? (5 points)
-How many Martian days' worth of data are there? (5 points)
-The data was analyzed to answer the following questions, and a data visualization was created to support each answer: (30 points)
-
-Which month, on average, has the lowest temperature? The highest? (10 points)
-Which month, on average, has the lowest atmospheric pressure? The highest? (10 points)
-How many terrestrial days exist in a Martian year? A visual estimate within 25% was made. (10 points)
-The DataFrame was exported into a CSV file. (5 points)
