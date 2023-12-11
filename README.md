@@ -1,17 +1,18 @@
-#Background#
+**Background**
+
 You’re now ready to take on the full web-scraping and data analysis project for the mission to Mars. You’ve learned to identify HTML elements on a page, identify their id and class attributes, and use this knowledge to extract information via both automated browsing with Splinter and HTML parsing with Beautiful Soup. You’ve also learned to scrape various types of information. These include HTML tables and recurring elements, like multiple news articles on a webpage.
 
 As you work on this Challenge, remember that you’re strengthening the same core skills that you’ve been developing until now: collecting data, organizing and storing data, analyzing data, and then visually communicating your insights.
 
-What You're Creating
+**What You're Creating**
 This new assignment consists of two technical products. You will submit the following deliverables:
 
 Deliverable 1: Scrape titles and preview text from Mars news articles. Optionally export the data into a JSON file or a MongoDB database.
 
 Deliverable 2: Scrape and analyze Mars weather data, which exists in a table.
 
-Instructions
-Deliverable 1: Scrape Titles and Preview Text from Mars News
+**Instructions**
+**Deliverable 1: Scrape Titles and Preview Text from Mars News**
 Use automated browsing to visit the Mars NASA news site. Inspect the page to identify which elements to scrape.
   
 
@@ -26,9 +27,9 @@ Store all the dictionaries in a Python list.
 Print the list in your notebook.
   
 
-Optionally, store the scraped data in a file or database (to ease sharing the data with others). To do so, export the scraped data to either a JSON file or a MongoDB database.
   
-Deliverable 2: Scrape and Analyze Mars Weather Data
+**Deliverable 2: Scrape and Analyze Mars Weather Data**
+  
 Use automated browsing to visit the Mars Temperature Data Site. Inspect the page to identify which elements to scrape.
   
 
