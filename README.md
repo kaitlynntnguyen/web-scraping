@@ -5,18 +5,13 @@ This new assignment consists of two technical products:
 -     Deliverable 2: Scrape and analyze Mars weather data.
 
 ### Deliverable 1: Scrape Titles and Preview Text from Mars News
-1. I used Splinter to visit (https://static.bc-edx.com/data/web/mars_news/index.html).
+1. I used Splinter to visit https://static.bc-edx.com/data/web/mars_news/index.html.
   
-
-Create a Beautiful Soup object and use it to extract text elements from the website.
+2. I created a Beautiful Soup object and used it to extract the text elements from the website.
   
-Extract the titles and preview text of the news articles that you scraped. Store the scraping results in Python data structures as follows:
-Store each title-and-preview pair in a Python dictionary. And, give each dictionary two keys: title and preview.
+3. I stored the article titles and preview texts of the news articles in a title-and-preview pair in a Python list of dictionaries, giving each dictionary two keys: `title` and `preview`.
 
-Store all the dictionaries in a Python list.
-  
-
-Print the list in your notebook.
+4. I exported the results to a json file `mars_news.json`
   
 
   
