@@ -5,7 +5,7 @@ This new assignment consists of two technical products:
 -     Deliverable 2: Scrape and analyze Mars weather data.
 
 ### Deliverable 1: Scrape Titles and Preview Text from Mars News
-Use automated browsing to visit the Mars NASA news site. Inspect the page to identify which elements to scrape.
+1. I used Splinter to visit (https://static.bc-edx.com/data/web/mars_news/index.html).
   
 
 Create a Beautiful Soup object and use it to extract text elements from the website.
