@@ -1,8 +1,8 @@
 # web-scraping-challenge
 
 This new assignment consists of two technical products:
--     Deliverable 1: Scrape titles and preview text from Mars news articles.
--     Deliverable 2: Scrape and analyze Mars weather data.
+- Deliverable 1: Scrape titles and preview text from Mars news articles.
+- Deliverable 2: Scrape and analyze Mars weather data.
 
 ### Deliverable 1: Scrape Titles and Preview Text from Mars News
 1. I used Splinter to visit https://static.bc-edx.com/data/web/mars_news/index.html.
@@ -11,8 +11,6 @@ This new assignment consists of two technical products:
   
 3. I stored the article titles and preview texts of the news articles in a title-and-preview pair in a Python list of dictionaries, giving each dictionary two keys: `title` and `preview`.
 
-4. I exported the results to a json file `mars_news.json`
-  
 
   
 ### Deliverable 2: Scrape and Analyze Mars Weather Data**
